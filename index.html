@@ -109,7 +109,7 @@
                         <!-- Đăng ký - Đăng Nhập-->
 
                         <li class="header__navbar-item header__navbar-item-strong header__navbar-item--separate">
-                            <a href="" class="header__navbar-item-link" onclick="register_form();return false;">
+                            <a class="header__navbar-item-link" onclick="register_form();return false;">
                                 Đăng ký
                             </a>
 
@@ -117,7 +117,7 @@
                         </li>
 
                         <li class="header__navbar-item header__navbar-item-strong">
-                            <a href="" class="header__navbar-item-link" onclick="login_form();return false;">
+                            <a class="header__navbar-item-link" onclick="login_form();return false;">
                                 Đăng nhập
                             </a>
 
@@ -434,61 +434,6 @@
                         <div class="home-product">
                             <div class="grid__row " id="grid__row">
                                 <!--Product item-->
-                                <div class="grid__column-2-4 " id="grid__column-2-4 ">
-
-
-                                    <div class="home-product-item" href="product_detail.html">
-                                        <div class="home-product-item__img "
-                                            style="background-image:url(./assets/img/t-shirt.jpg);">
-                                        </div>
-                                        <h4 class="home-product-item-name" id="home-product-item-name">Basic T-shirt
-                                        </h4>
-                                        <div class="home-product-item__price">
-                                            <span class="home-product-item__price-old">120.000đ</span>
-                                            <span class="home-product-item__price-current">80.000đ</span>
-
-                                        </div>
-                                        <div class="home-product-item__action">
-                                            <!--Remove class="home-product-item__like-icon--liked " icon like change color-->
-                                            <span class="home-product-item__like home-product-item__like-icon--liked ">
-                                                <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
-                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-
-                                            </span>
-                                            <div class="home-product-item__rating">
-                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
-
-                                            </div>
-                                            <span class="home-product-item__sold">Đã bán 57</span>
-
-                                        </div>
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">
-                                                CCa
-                                            </span>
-                                            <span class="home-product-item__origin-name">USA</span>
-                                        </div>
-                                        <div class="home-product-item__favourite">
-                                            <i class="fa-solid fa-check"></i>
-                                            <span> Yêu thích</span>
-
-                                        </div>
-                                        <div class="home-product-item__sale-off">
-                                            <span class="home-product-item__sale-off-percent">
-                                                10%
-                                            </span>
-                                            <label for="" class="home-product-item__sale-off-label">Sale</label>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-
 
 
                             </div>
@@ -685,152 +630,10 @@
         </footer>
     </div>
 
-    <!--Modal layout-->
-    <div class="modal" id="modal__register">
-        <div class="modal__overlay">
 
-        </div>
-
-        <div class="modal__body">
-
-
-            <!--register form-->
-            <form action="" method="POST" class="form" id="form-register">
-
-                <div class="auth-form" id="auth-form">
-                    <div class="auth-form__container">
-                        <div class="auth-form__header">
-                            <h3 class="auth-form_heading"> Đăng Ký</h3>
-                            <span class="auth-form_switch-btn">Đăng nhập</span>
-                        </div>
-
-                        <div class="auth-form_form">
-                            <div class="auth-form__group">
-                                <input id="email" type="text" class="auth-form__input" placeholder="Nhập Email">
-                            </div>
-                            <div class="auth-form__group">
-                                <input id="pwd" type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
-                            </div>
-                            <div class="auth-form__group">
-                                <input id="repwd" type="password" class="auth-form__input"
-                                    placeholder="Nhập lại mật khẩu">
-                            </div>
-
-                        </div>
-                        <div class="auth-form__more">
-                            <p class="auth-form__policy-text">
-                                Bằng việc đăng kí, bạn đồng ý với shop về
-                                <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a>&
-                                <a href="" class="auth-form__text-link">Chính sách bảo mật</a>&
-
-                            </p>
-                        </div>
-                        <div class="auth-form__control">
-                            <button class="btn btn--normal auth-form__control-back"
-                                onclick="goBack_login() ;return false;">Trở
-                                lại</button>
-                            <button class="btn btn--primary" id="register-btn">Đăng ký</button>
-
-                        </div>
-                    </div>
-
-                    <div class="auth-form__socials">
-                        <a href="" class="auth-form__socials--fb btn btn--size-s btn--with-icon">
-                            <i class=" auth-form__socials-icon fa-brands fa-square-facebook"></i>
-                            <span class="auth-form__socials-title">Facebook</span>
-                        </a>
-
-                        <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
-                            <i class=" auth-form__socials-icon fa-brands fa-google"></i>
-                            <span class="auth-form__socials-title">Google</span>
-                        </a>
-                    </div>
-                </div>
-            </form>
-
-
-        </div>
-    </div>
-
-    <div class="modal" id="modal__login">
-        <div class="modal__overlay">
-
-        </div>
-
-        <div class="modal__body" id="modal__body">
-
-            <!--Login form-->
-
-            <div class="auth-form" id="auth-form">
-                <div class="auth-form__container">
-                    <div class="auth-form__header">
-                        <h3 class="auth-form_heading"> Đăng Ký</h3>
-                        <span class="auth-form_switch-btn">Đăng nhập</span>
-                    </div>
-
-                    <div class="auth-form_form">
-                        <div class="auth-form__group">
-                            <input type="text" class="auth-form__input" placeholder="Nhập Email">
-                        </div>
-                        <div class="auth-form__group">
-                            <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
-                        </div>
-
-
-                    </div>
-                    <div class="auth-form__more">
-                        <div class="auth-form__help">
-                            <a href="" class="auth-form__help-link auth-form__help-forgot">
-                                Quên mật khẩu
-                            </a>
-                            <span class="auth-form__help-sparate"></span>
-                            <a href="" class="auth-form__help-link">
-                                Cần trợ giúp?
-                            </a>
-                        </div>
-                    </div>
-                    <div class="auth-form__control">
-                        <button class="btn btn--normal auth-form__control-back"
-                            onclick="goBack_login() ;return false;">Trở
-                            lại</button>
-                        <button class="btn btn--primary" id="register-btn">Đăng Nhập</button>
-
-                    </div>
-                </div>
-
-                <div class="auth-form__socials">
-                    <a href="" class="auth-form__socials--fb btn btn--size-s btn--with-icon">
-                        <i class=" auth-form__socials-icon fa-brands fa-square-facebook"></i>
-                        <span class="auth-form__socials-title">Đăng Nhập Facebook</span>
-                    </a>
-
-                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
-                        <i class=" auth-form__socials-icon fa-brands fa-google"></i>
-                        <span class="auth-form__socials-title">Đăng Nhập Google</span>
-                    </a>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-    <script src="validator.js"></script>
-    <script>
-        Validator({
-            form: '#form-register',
-            rules: [
-                Validator.isEmail('#email'),
-                Validator.isRequired('#pwd'),
-                Validator.isComfirm('#repwd'),
-
-
-
-            ]
-        })
-    </script>
 
 </body>
-
-<script src="myscript.js"></script>
+<script src="validator.js"></script>
+<script src="product.js"></script>
 
 </html>
