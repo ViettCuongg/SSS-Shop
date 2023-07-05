@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaleProduct</title>
+    <link rel="icon" href="./assets/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    <script src="footer.js"></script>
+    <script src="header.js"></script>
+</head>
+
+<body>
+    <header-component></header-component>
+    <div class="app__container">
+        <div class="slugan_text">
+            <span class="fa-solid fa-shield-halved"></span>
+            <span class="sulan_text__bold">Cam kết hoàn tiền. </span>
+            <span>Nhận sản phẩm như mô tả hoặc nhận tiền hoàn.</span>
+        </div>
+        <div class="true_quantity">
+            <p class="true_quantity__homeMake">
+                Bán từ nhà.
+            </p>
+            <div class="true_quantity__homeMake__desc">
+
+                Mô tả các mặt hàng một cách trung thực và nhận được khoản thanh toán đảm bảo 100%.
+            </div>
+            <div class="true_quantity__step">
+                Bước 1<i class="fa-solid fa-arrow-right"></i>
+                Bước 2
+            </div>
+
+        </div>
+
+        <div class="form__saleProduct">
+            <div class="form-group">
+                <label for="email" class="form-label">Tên sản phẩm:</label>
+                <input id="email" name="email" type="text" placeholder="Nhập vào" class="saleProduct__input">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Danh mục:</label>
+                <input list="categorys" name="category" id="category" class="saleProduct__input">
+                <datalist id="categorys">
+                    <option value="Quần tây">
+                    <option value="Aó  Thun">
+                    <option value="Aó sơ mi">
+                    <option value="Aó khoác ">
+                    <option value="Aó da">
+                </datalist>
+                <div class="choosed"> Đã chọn:</div>
+                <span class="form-message"></span>
+            </div>
+            <div class="condition_product">
+                <div class="condition_product__title">
+                    <label for="email" class="form-label">Tình trạng:</label>
+                </div>
+                <div class="condition_product__typelist">
+                    <div class="condition_product__type">
+                        <p class="condition_product__status">
+                            Mới
+                        </p>
+                        <p class="condition_product__detail">
+                            Hàng mới kèm mác, chưa mở hộp/bao bì, chưa qua sử dụng.
+                        </p>
+                    </div>
+                    <div class="condition_product__type">
+                        <div class="condition_product__status">
+                            <p class="condition_product__status">
+                                Như Mới
+                            </p>
+                        </div>
+                        <div class="condition_product__detail">
+                            Hàng mới kèm mác, đã mở bao bì/hộp, chưa qua sử dụng.
+                        </div>
+                    </div>
+                    <div class="condition_product__type">
+                        <div class="condition_product__status">
+                            <p class="condition_product__status">
+                                Tốt
+                            </p>
+                        </div>
+                        <div class="condition_product__detail">
+                            Đã qua sử dụng, tính năng đầy đủ, hoạt động tốt (có thể có vài vết xước nhỏ)
+                        </div>
+                    </div>
+                    <div class="condition_product__type">
+                        <div class="condition_product__status">
+                            <p class="condition_product__status">
+                                Trung Bình
+                            </p>
+                        </div>
+                        <div class="condition_product__detail">
+                            Hàng đã qua sử dụng, đầy đủ chức năng. Nhiều sai sót hoặc lỗi nhỏ.
+                        </div>
+                    </div>
+                    <div class="condition_product__type">
+                        <div class="condition_product__status">
+                            <p class="condition_product__status">
+                                Kém
+                            </p>
+                        </div>
+                        <div class="condition_product__detail">
+                            Đã qua sử dụng. Nhiều sai sót. Có thể bị hư hỏng (đề cập chi tiết nếu bị hư hỏng).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__sale__nextStep">
+            <a class="form__sale__nextStep__btn"> <span>Next</span></a>
+        </div>
+    </div>
+    <!--footer-->
+    <footer-component></footer-component>
+</body>
+<script src="validator.js"></script>
+
+</html>

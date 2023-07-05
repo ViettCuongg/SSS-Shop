@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="./assets/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    <script src="footer.js"></script>
+    <script src="header.js"></script>
+
+</head>
+
+<body>
+    <div class="app">
+        <!--header-->
+        <header-component></header-component>
+
+        <div class="app__container">
+
+            <div id="page__header" class="contact__header">
+
+                <h2 class="a">#Contact us</h2>
+                <p>Bridging Your Customer Solutions.!</p>
+            </div>
+            <div class="contact__details" id="section-m1">
+                <div class="details">
+                    <span>GET IN TOUCH</span>
+                    <h2>Visit one of our agency location or contact us</h2>
+                    <h3> Head Office</h3>
+                    <div>
+                        <li>
+                            <i class="fa-regular fa-map"></i>
+                            <p> 14 Nguyen Thi Thap Q.7 TP. Hồ Chí Minh</p>
+                        </li>
+
+                        <li>
+                            <i class="far fa-envelope"></i>
+                            <p> sssshop@gmail.com</p>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <p> 011.231.2334</p>
+                        </li>
+
+                        <li>
+                            <i class="far fa-clock"></i>
+                            <p> Monday to Sunday: 9:00 am to 22:00 pm</p>
+                        </li>
+                    </div>
+
+
+                </div>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0235247368432!2d106.69719467469649!3d10.732668889413482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528b2747a81a3%3A0x33c1813055acb613!2sTon%20Duc%20Thang%20University!5e0!3m2!1sen!2s!4v1688555193303!5m2!1sen!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div id="form__details">
+                <form action="" method="POST" id="form-register" class="form__message">
+                    <h3 class="heading">LEAVE A MESSAGE</h3>
+                    <p class="desc">WE LOVE TO HEAR FROM YOU ❤️</p>
+
+                    <div class="spacer"></div>
+
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name </label>
+                        <input id="name" name="name" type="text" class="form-control" placeholder="VD:Nguyễn Văn A">
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" name="email" type="text" placeholder="VD: email@gmail.com"
+                            class="form-control">
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Your Message</label>
+                        <textarea id="message__info" name="message__info" type="text" placeholder="Your Message..."
+                            rows="10" cols="30"></textarea>
+                        <span class="form-message"></span>
+                    </div>
+
+                    <button class="explore__btn">Submit</button>
+
+                </form>
+
+                <div class="staff_details">
+                    <div>
+                        <img src="assets/img/staff1.jpg" alt="">
+                        <p><span>John Weak</span> Senior Marketing Maneger <br> Phone:033 987 345<br> Email:
+                            sssStaff1@gmail.com</p>
+                    </div>
+
+                    <div>
+                        <img src="assets/img/staff2.jpg" alt="">
+                        <p><span>John Deep</span> Chef Marketing Maneger <br> Phone:033 112 113<br> Email:
+                            sssStaff2@gmail.com</p>
+                    </div>
+
+                    <div>
+                        <img src="assets/img/staff3.jpg" alt="">
+                        <p><span>Lena Nguyen</span> Staff manager <br> Phone:033 124 231<br> Email:
+                            sssStaff3@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        <footer-component></footer-component>
+        <script src="validator.js"></script>
+        <script>
+            Validator({
+                form: '#form-register',
+                errorSelector: '.form-message',
+                rules: [
+                    Validator.isrequired('#name'),
+                    Validator.isName('#name', 'Tên của bạn có kí tự không hợp lệ!'),
+                    Validator.minName('#name', 4),
+
+                    Validator.isrequired('#email'),
+                    Validator.isEmail('#email'),
+
+                    Validator.isrequired('#message__info', 'Vui lòng điền thông tin vào đây .'),
+
+
+                ],
+                onSubmit: function (data) {
+                    console.log(data)
+                }
+            })
+        </script>
+</body>
+<script src="validator.js"></script>
+
+</html>

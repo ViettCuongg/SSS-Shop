@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+  <style>
+    input[type="text"] {
+      width: 200px;
+    }
+  </style>
 </head>
-
 <body>
-
+  <label for="myInput">Dropdown Menu:</label>
+  <input type="text" id="myInput" list="myList">
+  <datalist id="myList">
+    <option value="Option 1">
+    <option value="Option 2">
+    <option value="Option 3">
+  </datalist>
 </body>
-
 </html>

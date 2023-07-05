@@ -170,12 +170,12 @@
                         <img src="https://down-vn.img.susercontent.com/file/a5e589e8e118e937dc660f224b9a1472"
                             alt="Download QR" class="footer__download-qr">
                         <div class="footer__down-app">
-                            <a href="" class="footer__download-app-link">
+                            <a href="#" class="footer__download-app-link">
 
 
                                 <img src="./assets/img/appstore.png" alt="App store" class="footer__download-app-img">
                             </a>
-                            <a href="" class="footer__download-app-link">
+                            <a href="#" class="footer__download-app-link">
 
                                 <img src="./assets/img/googlestore.png" alt="Google play"
                                     class="footer__download-app-img">
@@ -210,6 +210,8 @@
 
                 Validator.isrequired('#password'),
                 Validator.minlength('#password', 6, 'Mật khẩu phải từ 6 kí tự trở lên.'),
+
+                Validator.isrequired('#password_confirmation'),
                 Validator.isConfirmPWD('#password_confirmation', function () {
                     return document.querySelector('#form-register #password').value;
                 }, 'Mật khẩu nhập lại không chính xác!'),
@@ -217,7 +219,11 @@
 
 
 
-            ]
+
+            ],
+            onSubmit: function (data) {
+                console.log(data)
+            }
         })
     </script>
 </body>

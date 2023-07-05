@@ -5,17 +5,34 @@ function register_form() {
 
 function login_form() {
 
-    window.location.href = "test.html"
+    window.location.href = "signin.html"
 
+
+}
+function blog_page() {
+    window.location.href = "blog.html"
+}
+function sale_product() {
+    window.location.href = "sale_product.html"
+}
+
+function aboutus_page() {
+    window.location.href = "aboutus.html"
+}
+function contact_page() {
+    window.location.href = "contact.html"
+}
+function card_page(){
+    window.location.href = "cardpage.html"
 
 }
 
 
-
-
-
-
 function Validator(options) {
+
+    function getParemt() {
+
+    }
     var selectorRules = {};
 
     //ham thuc hien Validate//
@@ -42,12 +59,56 @@ function Validator(options) {
             errorElement.innerText = '';
             inputElement.parentElement.classList.remove('invalid')
         }
+        return !erroMessage;
 
     }
     //thuc hien lay Element//
     var formElement = document.querySelector(options.form)
 
     if (formElement) {
+
+        formElement.onsubmit = function (e) {
+            e.preventDefault();
+            var isFormValid = true;
+            options.rules.forEach(function (rule) {
+
+                //lap qua tung rule va validate
+                var inputElement = formElement.querySelector(rule.selector)
+                var isValid = validate(inputElement, rule);
+                if (!isValid) {
+                    isFormValid = false;
+                }
+            });
+
+
+
+            if (isFormValid) {
+                //submit voi javascript
+                if (typeof options.onSubmit === 'function') {
+                    var enableInputs = formElement.querySelectorAll('[name]')
+
+                    var formValues = Array.from(enableInputs).reduce(function (values, input) {
+                        values[input.name] = input.value;
+                        return values;
+                    }, {});
+                    options.onSubmit(formValues);
+
+                    window.location.href = 'index.html';
+                }
+
+
+                //submt voi html
+                else {
+
+                    formElement.submit();
+                }
+            }
+            else {
+                console.log('co loi')
+            }
+        }
+
+        //xử lí qua từng rule
         options.rules.forEach(function (rule) {
             //save rule in each input
 
@@ -145,21 +206,11 @@ Validator.isEmail = function (selector, message) {
         test: function (value) {
 
             var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            return regex.test(value) ? undefined : message || 'Vui lòng nhập đúng Email'
+            return regex.test(value) ? undefined : message || 'Email chứa kí tự không hợp lệ!'
         }
     }
 
 }
-
-// Validator.isRequired = function (selector) {
-//     return {
-//         selector: selector,
-//         test: function (value) {
-//             return value ? underfind : 'vui long nhap mat khau'
-//         }
-//     }
-
-// }
 
 
 
@@ -181,4 +232,15 @@ Validator.isConfirmPWD = function (selector, getConfirmValue, message) {
 
         }
     }
+}
+
+Validator.minMessage = function (selector, min, message) {
+    return {
+        selector: selector,
+        test: function (value) {
+            return value.length >= min ? undefined : message || `Vui lòng nhập ${min} kí tự`
+
+        }
+    }
+
 }

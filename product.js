@@ -85,6 +85,30 @@ let shopItemsData = [
         img: "./assets/img/aophong_mysi.jpg",
         sold: 49,
     },
+
+    {
+        id: "item6",
+        name: "Basic-TShirt",
+        oldPrice: "100.000đ",
+        newPrice: "90.000đ",
+        brand: "OVA",
+        origin: "USA",
+        sale: "9%",
+        img: "./assets/img/adidas_aogio.jpg",
+        sold: 49,
+    },
+
+    {
+        id: "item6",
+        name: "Váy hoa nữ chất liệu cotton 100%",
+        oldPrice: "100.000đ",
+        newPrice: "90.000đ",
+        brand: "OVA",
+        origin: "USA",
+        sale: "9%",
+        img: "./assets/img/vay_hoa.jpg",
+        sold: 49,
+    },
 ]
 
 let genneraeShop = () => {
